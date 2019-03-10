@@ -1,0 +1,23 @@
+body {
+	padding: 100px;
+}
+a {
+	cursor: pointer;
+	text-decoration: none;
+}
+.word:hover {
+	background-color: #fce792;
+}
+.expression:hover {
+	background-color: #acf059;
+}
+.b {
+	border: 1px solid black;
+	border-radius: 5px;
+}
+.yellow {
+	background-color: #fce792;
+}
+.green {
+	background-color: #acf059;
+}
