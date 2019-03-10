@@ -1,9 +1,9 @@
 $('[data-toggle="popover"]').popover().on('click', function (e) {
 		// $(this).toggleClass('b');
 		if ($(this).hasClass('word')) {
-			$(this).addClass('yellow');
+			$(this).toggleClass('yellow');
 		} else if ($(this).hasClass('expression')) {
-			$(this).addClass('green');
+			$(this).toggleClass('green');
 		}
 	$('[data-toggle="popover"]').each(function (i,item) {
 		 //compare each element with the current element 
