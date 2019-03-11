@@ -1,5 +1,8 @@
-body {
+/*body {
 	padding: 100px;
+}*/
+nav {
+	margin-bottom: 100px;
 }
 a {
 	cursor: pointer;
@@ -9,6 +12,12 @@ a {
 	background-color: #fce792;
 }
 .expression:hover {
+	background-color: #acf059;
+}
+.wordd:hover {
+	background-color: #fce792;
+}
+.expressionn:hover {
 	background-color: #acf059;
 }
 .b {

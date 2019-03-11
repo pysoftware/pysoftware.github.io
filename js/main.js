@@ -30,4 +30,16 @@ $("html").click(function(e) {
 		}
    	}
 });
+$('.expressionn').mouseover(function() {
+	$(this).popover('show');
+});
+$('.expressionn').mouseout(function() {
+	$(this).popover('hide');
+});
+$('.wordd').mouseover(function() {
+	$(this).popover('show');
+});
+$('.wordd').mouseout(function() {
+	$(this).popover('hide');
+});
 
