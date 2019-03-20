@@ -1,171 +1,183 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bootstrap</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{{ title }}</title>
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <style>
-  @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
-  a:hover {
-    text-decoration: none;
-  }
-  body, html {
-    width: 100%;
-    height: 100%;
-    font-family: "Poppins", sans-serif;
-    color: #222;
-  }
-  .title {
-    display: flex;
-    margin-bottom: 15px;
-  }
-  .title h1 {
-    width: 50%;
-  }
-  .text {
-    display: flex;
-    padding: 5px 0 5px 0;
-  }
-  .text:hover {
-    background-color: #e2e2e2;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    /*border-radius: 10px;*/
-  }
-  .eng, .rus {
-    width: 50%;
-  }
-  .eng {
-    padding-right: 2px;
-  }
-  .rus {
-    padding-left: 3px;
-    border-left: 1px solid black;
-  }
-  .col-md-8 {
-    padding: 0;
-  }
-  hr {
-    border-top: 2px solid silver;
-    width: 100%;
-    margin-top: 0.3em;
-    margin-bottom: 1em;
-  }
-  @media (min-width: 320px) {
-    h1 {
-      font-size: 21px;
+    a:hover {
+      text-decoration: none;
     }
-  }
-  @media (min-width: 720px) {
-    h1 {
-      font-size: 32px;
-    }
-  }
-  nav {
-    margin-bottom: 100px;
-  }
-  a {
-    cursor: pointer;
-    text-decoration: none;
-  }
-  .title {
-    display: flex;
-  }
-  .light:hover {
-    background-color: yellow;
-  }
-  .word:hover {
-    background-color: #fce792;
-  }
-  .expression:hover {
-    background-color: #acf059;
-  }
-  .wordd:hover {
-    background-color: #fce792;
-  }
-  .expressionn:hover {
-    background-color: #acf059;
-  }
-  .b {
-    border: 1px solid black;
-    border-radius: 5px;
-  }
-  .yellow {
-    background-color: #fce792;
-  }
-  .green {
-    background-color: #acf059;
-  }
-</style>
+  </style>
 </head>
 <body>
-  <div class="container-fluid">
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <div class="title text-center">
-          <h1 class="songname">The Lazy sound <br><small>Bruno Mars</small></h1>
-          <h1 class="songname">Ленивая песня <br><small>Bruno Mars</small></h1>
-        </div>
-        <hr>
-        <div class="text">
-          <div class="eng text-center">
-            <a href = '#' data-container="body" data-toggle="popover" data-placement="top" data-content="Сегодня" title = 'Сегодня' placement = 'top' class="wordd">Today</a>
-            <a href = '#' data-container="body" data-toggle="popover" data-placement="top" data-content="Я не хочу" title = 'Я не хочу' placement = 'top' class="expressionn"> I don't feel like </a>
-            <a href = '#' data-container="body" data-toggle="popover" data-placement="top" data-content="Ничего не делать" title = 'Ничего не делать' placement = 'top' class="wordd"> doing anything </a>
+  <nav class="navbar navbar-default navbar-fixed-top navbar-expand-lg navbar-dark bg-dark pb-0 pt-0">
+    <a class="navbar-brand" href="#"><b>LE</b></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarsExample09">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'blog-home' %}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'blog-contacts' %}">Contacts</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown10" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown10">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
           </div>
-          <div class="rus text-center">Сегодня у меня нет желания что-либо делать,</div>
-        </div>
-        <div class="text">
-          <div class="eng text-center">
-            <a href = '#' data-container="body" data-toggle="popover" data-placement="top" data-content="Я" title = 'Я' placement = 'top' class="wordd"> I </a>
-            <a href = '#' data-container="body" data-toggle="popover" data-placement="top" data-content="Просто" title = 'Просто' placement = 'top' class="wordd"> just </a> <a href = '#' data-container="body" data-toggle="popover" data-placement="top" data-content="Want + to (wanna)" title = 'хочу' placement = 'top' class="wordd"> wanna </a>
-            <a href = '#' data-container="body" data-toggle="popover" data-placement="top" data-content="Лежать" title = 'Лежать' placement = 'top' class="wordd"> lay </a> <a href = '#' data-container="body" data-toggle="popover" data-placement="top" data-content="В" title = 'В' placement = 'top' class="wordd"> in </a>
-            <a href = '#' data-container="body" data-toggle="popover" data-placement="top" data-content="Мой" title = 'Мой' placement = 'top' class="wordd"> my </a>
-            <a href = '#' data-container="body" data-toggle="popover" data-placement="top" data-content="Кровать" title = 'Кровать' placement = 'top' class="wordd"> bed </a>
-          </div>
-          <div class="rus text-center">Я просто хочу остаться в своей кровати</div>
-        </div>
-        <div class="text">
-          <div class="eng text-center">
-            <!-- Don't feel like picking up my phone, -->
-            <a href = '#' data-html="true" data-container="body" data-toggle="popover" data-placement="top" data-content="Don't feel like + verb(+ing) <br> I don't feel like dancing now<br> Сейчас я не хочу танцевать" title = 'Не хочу' placement = 'top' class="expressionn"> Don't feel like </a>
-            <a href = '#' data-html="true" data-container="body" data-toggle="popover" data-placement="top" data-content="Брать трубку <br> He don't picking up the phone" title = '(В данном случае) Брать трубку' placement = 'top' class="expressionn"> picking up </a>
-            <a href = '#' data-html="true" data-container="body" data-toggle="popover" data-placement="top" data-content="Мой" title = 'Мой' placement = 'top' class="wordd"> my </a>
-            <a href = '#' data-html="true" data-container="body" data-toggle="popover" data-placement="top" data-content="Телефон" title = 'Телефон' placement = 'top' class="wordd"> phone </a>
-          </div>
-          <div class="rus text-center">У меня нет желания брать трубку,</div>
-        </div>
-        <div class="text">
-          <div class="eng text-center">
-            <a href = '#' data-html="true" data-container="body" data-toggle="popover" data-placement="top" data-content="Поэтому" title = '(В данном случае)Поэтому' placement = 'top' class="wordd"> So </a>
-            <a href = '#' data-html="true" data-container="body" data-toggle="popover" data-placement="top" data-content="Оставьте сообщение после сигнала" title = 'Оставьте сообщение после сигнала<br>Оставьте голосовое сообщение' placement = 'top' class="expressionn"> leave a message at the tone </a>
-          </div>
-          <div class="rus text-center">Поэтому оставьте голосовое сообщение,</div>
-        </div>
-        <div class="text">
-          <div class="eng text-center">
-            <a href = '#' data-html="true" data-container="body" data-toggle="popover" data-placement="top" data-content="Потому что" title = "Because (Cus/ cuz')" placement = 'top' class="wordd"> Cus </a>
-            <a href = '#' data-html="true" data-container="body" data-toggle="popover" data-placement="top" data-content="Сегодня" title = "Сегодня" placement = 'top' class="wordd"> today </a>
-            <a href = '#' data-html="true" data-container="body" data-toggle="popover" data-placement="top" data-content="Я клянусь" title = "Я клянусь" placement = 'top' class="expressionn"> I swear </a>
-          </div>
-          <div class="rus text-center">Потому что сегодня я клянусь,</div>
-        </div>
-        <div class="text">
-          <div class="eng text-center">
-            <a href = '#' data-html="true" data-container="body" data-toggle="popover" data-placement="top" data-content="Я ничего не делаю" title = "Я ничего не делаю" placement = 'top' class="expressionn"> I'm not doing anything </a>
-          </div>
-          <div class="rus text-center">Что ничего не буду делать.</div>
-        </div>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-md-0">
+        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+      </form>
+    </div>
+    <!-- <div class="navbar-nav">
+      <a href="" class="btn btn-outline-secondary mr-2 ml-5">Registration</a>
+      <a href="" class="btn btn-outline-secondary">Enter</a>
+    </div> -->
+  </nav>
+  <!-- PHOTO -->
+  <div class="container-fluid mb-4" style="background-color: #eaeaea;">
+    <div class="row pt-3 pl-5 pb-3">
+      <div class="image">
+        <img src="C:\Users\Дмиитрий\Desktop\img.jpg" alt="#" class="img-thumbnail">
+      </div>
+      <div class="col-md-5">
+        <h1>The Lazy Song</h1>
+        <h4>BRUNO MARS</h4>
+        <h6>Doo-Wops & Hooligans</h6>
+        <!-- RUS UNDER ENG -->
+        <button class="btn btn-success rue" name="click_me">RUS UNDER ENG</button>
+        <!-- TO COL -->
+        <button class="btn btn-dark tc" name="click_me">TO COL</button>
       </div>
     </div>
   </div>
-  <script type="text/javascript" src="js/main.js"></script>
+  <!-- ВТОРОЙ НАВБАР -->
+<!--  <nav class="navbar navbar-expand-lg navbar-light mb-5 pb-0 pt-0" style="background-color: #eaeaea;">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
+      <ul class="navbar-nav" style="font-size: 18px">
+        <li class="nav-item">
+          <a class="nav-link text-primary" href="#">Centered nav only</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-primary" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-primary" href="#" id="dropdown10" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown10">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav> -->
+
+  <!-- ОСНОВНОЙ БЛОК -->
+
+  <main class="container-fluid">
+    <div class="row">
+      <div class="col-md-7" align="center">
+<!--        {% block main_section %}
+  {% endblock %}   -->
+<!--  <div class="title text-center">
+    <h1 class="songname">The Lazy sound <br><small>Bruno Mars</small></h1>
+    <h1 class="songname">Ленивая песня <br><small>Bruno Mars</small></h1>
+  </div>
+  <hr> -->
+  <div class="text">
+    <div class="eng text-center">
+      <a href = '#' data-container="body" data-toggle="popover" data-placement="top" data-content="Сегодня" title = 'Сегодня' placement = 'top' class="wordd">Today</a>
+      <a href = '#' data-container="body" data-toggle="popover" data-placement="top" data-content="Я не хочу" title = 'Я не хочу' placement = 'top' class="expressionn"> I don't feel like </a>
+      <a href = '#' data-container="body" data-toggle="popover" data-placement="top" data-content="Ничего не делать" title = 'Ничего не делать' placement = 'top' class="wordd"> doing anything </a>
+    </div>
+    <div class="rus text-center">Сегодня у меня нет желания что-либо делать,</div>
+  </div>
+  <div class="text">
+    <div class="eng text-center">
+      <a href = '#' data-container="body" data-toggle="popover" data-placement="top" data-content="Я" title = 'Я' placement = 'top' class="wordd"> I </a>
+      <a href = '#' data-container="body" data-toggle="popover" data-placement="top" data-content="Просто" title = 'Просто' placement = 'top' class="wordd"> just </a> <a href = '#' data-container="body" data-toggle="popover" data-placement="top" data-content="Want + to (wanna)" title = 'хочу' placement = 'top' class="wordd"> wanna </a>
+      <a href = '#' data-container="body" data-toggle="popover" data-placement="top" data-content="Лежать" title = 'Лежать' placement = 'top' class="wordd"> lay </a> <a href = '#' data-container="body" data-toggle="popover" data-placement="top" data-content="В" title = 'В' placement = 'top' class="wordd"> in </a>
+      <a href = '#' data-container="body" data-toggle="popover" data-placement="top" data-content="Мой" title = 'Мой' placement = 'top' class="wordd"> my </a>
+      <a href = '#' data-container="body" data-toggle="popover" data-placement="top" data-content="Кровать" title = 'Кровать' placement = 'top' class="wordd"> bed </a>
+    </div>
+    <div class="rus text-center">Я просто хочу остаться в своей кровати</div>
+  </div>
+  <div class="text">
+    <div class="eng text-center">
+      <!-- Don't feel like picking up my phone, -->
+      <a href = '#' data-html="true" data-container="body" data-toggle="popover" data-placement="top" data-content="Don't feel like + verb(+ing) <br> I don't feel like dancing now<br> Сейчас я не хочу танцевать" title = 'Не хочу' placement = 'top' class="expressionn"> Don't feel like </a>
+      <a href = '#' data-html="true" data-container="body" data-toggle="popover" data-placement="top" data-content="Брать трубку <br> He don't picking up the phone" title = '(В данном случае) Брать трубку' placement = 'top' class="expressionn"> picking up </a>
+      <a href = '#' data-html="true" data-container="body" data-toggle="popover" data-placement="top" data-content="Мой" title = 'Мой' placement = 'top' class="wordd"> my </a>
+      <a href = '#' data-html="true" data-container="body" data-toggle="popover" data-placement="top" data-content="Телефон" title = 'Телефон' placement = 'top' class="wordd"> phone </a>
+    </div>
+    <div class="rus text-center">У меня нет желания брать трубку,</div>
+  </div>
+  <div class="text">
+    <div class="eng text-center">
+      <a href = '#' data-html="true" data-container="body" data-toggle="popover" data-placement="top" data-content="Поэтому" title = '(В данном случае)Поэтому' placement = 'top' class="wordd"> So </a>
+      <a href = '#' data-html="true" data-container="body" data-toggle="popover" data-placement="top" data-content="Оставьте сообщение после сигнала" title = 'Оставьте сообщение после сигнала<br>Оставьте голосовое сообщение' placement = 'top' class="expressionn"> leave a message at the tone </a>
+    </div>
+    <div class="rus text-center">Поэтому оставьте голосовое сообщение,</div>
+  </div>
+  <div class="text">
+    <div class="eng text-center">
+      <a href = '#' data-html="true" data-container="body" data-toggle="popover" data-placement="top" data-content="Потому что" title = "Because (Cus/ cuz')" placement = 'top' class="wordd"> Cus </a>
+      <a href = '#' data-html="true" data-container="body" data-toggle="popover" data-placement="top" data-content="Сегодня" title = "Сегодня" placement = 'top' class="wordd"> today </a>
+      <a href = '#' data-html="true" data-container="body" data-toggle="popover" data-placement="top" data-content="Я клянусь" title = "Я клянусь" placement = 'top' class="expressionn"> I swear </a>
+    </div>
+    <div class="rus text-center">Потому что сегодня я клянусь,</div>
+  </div>
+  <div class="text">
+    <div class="eng text-center">
+      <a href = '#' data-html="true" data-container="body" data-toggle="popover" data-placement="top" data-content="Я ничего не делаю" title = "Я ничего не делаю" placement = 'top' class="expressionn"> I'm not doing anything </a>
+    </div>
+    <div class="rus text-center">Что ничего не буду делать.</div>
+  </div>
+  <div class="text" style="margin-top: 20px;">
+    <div class="eng text-center">
+      <a href = '#' data-html="true" data-container="body" data-toggle="popover" data-placement="top" data-content="Дословно: я собираюсь поднять свои ноги вверх" title = "Я задеру свои ноги" placement = 'top' class="expressionn"> I'm gonna kick my feet up </a>
+    </div>
+    <div class="rus text-center">Я задеру ноги вверх</div>
+  </div>  
+</div>
+
+<aside class="col-md-5">
+  <div class="bg-secondary p-3 mb-3 rounded" style="border: 3px solid black">
+    <h3><b>Interesting words and expressions</b></h3>
+    <p style="font-size: 18px;">
+      I don't feel like - я не хочу <br>
+      I feel like - я хочу <br>
+      Example: today i feel like dancing
+    </p>
+  </div>
+  <div class="p-3 mb-3">
+    <img src="https://joshuajangblog.files.wordpress.com/2016/09/42.jpg" alt="alt" class="img-thumbnail"> 
+  </div>
+</aside>
+</div>
+</main>
+
+
+<!-- JAVASCRIPT -->
+<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

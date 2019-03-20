@@ -55,4 +55,13 @@ $('.wordd').mouseover(function() {
 $('.wordd').mouseout(function() {
   $(this).popover('hide');
 });
+$('.rue').mousedown(function(event) {
+	$('.rus').css("border","0 solid black");
+	$('.text').css("display","block");
+	$('.rus,.eng').css('width', '100%');
+});
+$('.tc').mousedown(function(event) {
+	$('.rus').css("border-left","1px solid black");
+	$('.text').css("display","flex");
+});
 
